@@ -37,15 +37,18 @@ app = Client(
 #********************************************************************************
 start_text = """
 Hello! {}, 
-I can create **temp emails** for you. Send /new to **create new mail** !
+I can create **temp emails** for you.
+
+Send /new to **create new mail** !
 
 **Advantages**
-   • None Blacklisted Domains(Fresh Domains).
+   • None Blacklisted Domains.
+   • (Fresh Domains).
    • 24 hours Active.
 
 Send /domains to get list of Available Domains.
 
-**Developer** : @BETA_BOT_UPDATES |  @BETA_BOTZ
+**Developer** : @BETA_BOTZ
 """
 
 CHANNEL_ID = int(os.environ['CHANNEL_ID'])
