@@ -41,12 +41,11 @@ I can create **temp emails** for you. Send /new to **create new mail** !
 
 **Advantages**
    • None Blacklisted Domains(Fresh Domains).
-   • [API](https://www.1secmail.com/api/v1/) base Email box .
-   • 24 hours Active (paid hosting).
+   • 24 hours Active.
 
 Send /domains to get list of Available Domains.
 
-**Developer** : @ImDenuwan | @szteambots 
+**Developer** : @BETA_BOT_UPDATES |  @BETA_BOTZ
 """
 
 CHANNEL_ID = int(os.environ['CHANNEL_ID'])
@@ -56,11 +55,11 @@ OWNER = int(os.environ['OWNER'])
 start_button = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/slbotzone"),
-                    InlineKeyboardButton("🗣 Channel", url="https://t.me/szteambots")
+                    InlineKeyboardButton("👥 Group", url="https://t.me/BETA_SUPPORT"),
+                    InlineKeyboardButton("🗣 Channel", url="https://t.me/BETA_BOTZ")
                 ],
 		        [
-                    InlineKeyboardButton("➕Add to Group ➕", url=f"http://t.me/szFakeMailBot?startgroup=new"),
+                    InlineKeyboardButton("➕Add to Group ➕", url=f"http://t.me/FAKE_BETABOT?startgroup=new"),
                 ]    
             ]
 )
@@ -76,7 +75,6 @@ async def start(_, message: Message):
 🚧 **Access Denied** {message.from_user.mention}
 You must,
 🔹[join Our Telegram Channel](https://t.me/{CHANNEL}).
-@szteambots
 """)
        return
     name = message.from_user.id
@@ -100,7 +98,7 @@ API3='https://www.1secmail.com/api/v1/?action=readMessage&login='
 #********************************************************************************
 
 create = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("SZ team bots 🇱🇰", url="https://t.me/szteambots")]])
+            [[InlineKeyboardButton("BETA BOTZ", url="https://t.me/BETA_BOTZ")]])
 
 #********************************************************************************
 @app.on_message(filters.command("new"))
@@ -158,7 +156,7 @@ async def mail_box(_, query : CallbackQuery):
 **📬Done,Your Email Address Created!**
 📧 **Email** : `{smail}`
 📨 **Mail BOX** : ✅
-**Powered by** : @szteambots""",
+**Powered by** : @BETA_BOTZ""",
 reply_markup = mbutton
 )   
         except bad_request_400.MessageNotModified as e:
@@ -302,16 +300,11 @@ async def ads_message(_, message):
 
 Want to promote anything ? 
 
-Rose Bot is here with your basic needs. We work in around 2.5 thousand chats with thousand of userbase. One promotional broadcast reaches to thousands of peoples. 
+Beta Bot is here with your basic needs.
 
 Want to promote your online business ? Want to get people engagement? We are here!
 
-Promote whatever you want at lowest and affordable prices.
-
-https://telega.io/catalog_bots/szrosebot/card
-
-🔥Your broadcast will reach group also so minimum 50k users see your message.
-""")
+Promote whatever you want at lowest and affordable price""")
 
 print("I'm Alive Now!")
 app.run()
