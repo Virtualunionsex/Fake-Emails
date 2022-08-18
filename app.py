@@ -37,18 +37,17 @@ app = Client(
 #********************************************************************************
 start_text = """
 Hello! {}, 
-I can create **temp emails** for you.
+I can create **Temporary Emails** for you.
 
-Send /new to **create new mail** !
+On this bot you can create a temporary (disposable) email in a second, that self-destructs after some time. Stay safe, avoid spam - take care of your anonymity. You can select from many domains and create own nick. Smart, huh?
+
 
 **Advantages**
    • None Blacklisted Domains.
    • (Fresh Domains).
    • 24 hours Active.
 
-Send /domains to get list of Available Domains.
-
-**Developer** : @BETA_BOTZ
+Send /new to set-up your MailBox!.
 """
 
 CHANNEL_ID = int(os.environ['CHANNEL_ID'])
