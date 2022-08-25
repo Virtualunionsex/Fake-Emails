@@ -61,7 +61,7 @@ start_button = InlineKeyboardMarkup(
                     InlineKeyboardButton("🗣 Channel", url="https://t.me/BETA_BOTZ")
                 ],
 		        [
-                    InlineKeyboardButton("➕Add to Group ➕", url=f"http://t.me/FAKE_BETABOT?startgroup=new"),
+                    InlineKeyboardButton("🔹 Credits", url=f"t.me/szteambots"),
                 ]    
             ]
 )
