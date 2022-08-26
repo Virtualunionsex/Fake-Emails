@@ -54,11 +54,13 @@ CHANNEL_ID = int(os.environ['CHANNEL_ID'])
 CHANNEL = os.environ['CHANNEL']
 OWNER = int(os.environ['OWNER'])
 
+CHANNEL = await app.create_chat_invite_link(int(CHANNEL_ID))
+
 start_button = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton("👥 Group", url="https://t.me/BETA_SUPPORT"),
-                    InlineKeyboardButton("🗣 Channel", url="t.me/beta_botz")
+                    InlineKeyboardButton("🗣 Channel", url="CHANNEL")
                 ],
 		        [
                     InlineKeyboardButton("🔹 Owner", user_id=OWNER),
