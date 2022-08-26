@@ -58,7 +58,7 @@ start_button = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton("👥 Group", url="https://t.me/BETA_SUPPORT"),
-                    InlineKeyboardButton("🗣 Channel", chat_id=CHANNEL_ID)
+                    InlineKeyboardButton("🗣 Channel", user_id=CHANNEL_ID)
                 ],
 		        [
                     InlineKeyboardButton("🔹 Owner", user_id=OWNER),
