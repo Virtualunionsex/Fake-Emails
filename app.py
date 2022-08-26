@@ -61,7 +61,7 @@ start_button = InlineKeyboardMarkup(
                     InlineKeyboardButton("🗣 Channel", url="https://t.me/BETA_BOTZ")
                 ],
 		        [
-                    InlineKeyboardButton("🔹 Credits", url=f"t.me/szteambots"),
+                    InlineKeyboardButton("🔹 Owner", user_id=OWNER),
                 ]    
             ]
 )
@@ -306,7 +306,9 @@ Beta Bot is here with your basic needs.
 
 Want to promote your online business ? Want to get people engagement? We are here!
 
-Promote whatever you want at lowest and affordable price""")
+Promote whatever you want at lowest and affordable price
+
+Contact @ASSISTANT_BETABOT To Get More Info""")
 
 print("I'm Alive Now!")
 app.run()
