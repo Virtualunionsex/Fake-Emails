@@ -84,7 +84,6 @@ fsubtn = InlineKeyboardMarkup(
 
 @app.on_message(filters.command("start"))
 async def start(_, message: Message):
-    jp = await message.get_me()
     try:
        await message._client.get_chat_member(CHANNEL_ID, message.from_user.id)
     except UserNotParticipant:
