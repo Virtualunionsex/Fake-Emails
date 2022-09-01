@@ -81,7 +81,9 @@ async def start(_, message: Message):
 			text=f"""
 🚧 **Access Denied** {message.from_user.mention}
 DUE TO OVERLOAD,
-🔹YOU MUST JOIN OUR CHANNEL"""                 
+🔹YOU MUST JOIN OUR CHANNEL
+
+JOIN @{CHANNEL} 💎"""                 
        )
        return     
     name = message.from_user.id
