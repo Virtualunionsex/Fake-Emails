@@ -76,7 +76,7 @@ async def start(_, message: Message):
     try:
        await message._client.get_chat_member(CHANNEL_ID, message.from_user.id)
     except UserNotParticipant:
-       await app.send_message(
+       await message.reply(
 			chat_id=message.from_user.id,
 			text=f"""
 🚧 **Access Denied** {message.from_user.mention}
