@@ -77,13 +77,13 @@ async def start_message(bot, message):
            reply_markup=start_button)
 
 
-@app.on_message(filters.private & filters.command("start"))
-async def start(_, message: Message):
-    await message.reply_text(
-        text = start_text.format(message.from_user.mention),
-        reply_markup = start_button)
-    return await add_served_user(message.from_user.id)
-    chnl = await app.create_chat_invite_link(int(CHANNEL_ID))
+#@app.on_message(filters.private & filters.command("start"))
+#async def start(_, message: Message):
+#    await message.reply_text(
+#        text = start_text.format(message.from_user.mention),
+#        reply_markup = start_button)
+#    return await add_served_user(message.from_user.id)
+#    chnl = await app.create_chat_invite_link(int(CHANNEL_ID))
 
     
 #********************************************************************************
