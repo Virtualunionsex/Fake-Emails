@@ -70,17 +70,6 @@ start_button = InlineKeyboardMarkup(
 
 
 
-fsubtn = InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("CLICK HERE TO JOIN CHANNEL", url=f"t.me/{CHANNEL}"),
-                    InlineKeyboardButton("JOINED? CLICK HERE!", url=f"https://t.me/TEMP_EMAILSBOT?start=start")
-                ],
-		        [
-                    InlineKeyboardButton("🔹 Owner", user_id=OWNER),
-                ]    
-            ]
-)
 
 @app.on_message(filters.command("start"))
 async def start(_, message: Message):
@@ -92,8 +81,7 @@ async def start(_, message: Message):
 			text=f"""
 🚧 **Access Denied** {message.from_user.mention}
 DUE TO OVERLOAD,
-🔹YOU MUST JOIN OUR CHANNEL""",
-reply_markup = fsubtn                       
+🔹YOU MUST JOIN OUR CHANNEL""")                      
        )
        return     
     name = message.from_user.id
