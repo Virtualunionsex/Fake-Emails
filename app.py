@@ -67,6 +67,26 @@ start_button = InlineKeyboardMarkup(
             ]
 )
 
+InlineKeyboardMarkup( [[
+                           InlineKeyboardButton(text="CLICK HERE TO JOIN CHANNEL", url="t.me/{CHANNEL}")
+                           ],[
+                           InlineKeyboardButton("JOINED? CLICK HERE!", url=f"https://t.me/{jp.username}?start=start")            
+                           ]]
+                           )
+
+
+fsubtn = InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("CLICK HERE TO JOIN CHANNEL", url=f"t.me/{CHANNEL}"),
+                    InlineKeyboardButton("JOINED? CLICK HERE!", url=f"https://t.me/{jp.username}?start=start")
+                ],
+		        [
+                    InlineKeyboardButton("🔹 Owner", user_id=OWNER),
+                ]    
+            ]
+)
+
 @app.on_message(filters.command("start"))
 async def start(_, message: Message):
     jp = await message.get_me()
@@ -78,13 +98,9 @@ async def start(_, message: Message):
 			text=f"""
 🚧 **Access Denied** {message.from_user.mention}
 DUE TO OVERLOAD,
-🔹YOU MUST JOIN OUR CHANNEL""")
-                        reply_markup=InlineKeyboardMarkup( [[
-                           InlineKeyboardButton(text="CLICK HERE TO JOIN CHANNEL", url="t.me/{CHANNEL}")
-                           ],[
-                           InlineKeyboardButton("JOINED? CLICK HERE!", url=f"https://t.me/{jp.username}?start=start")            
-                           ]]
-                           )
+🔹YOU MUST JOIN OUR CHANNEL""",
+reply_markup = mbutton
+)                        
        )
        return     
     name = message.from_user.id
@@ -167,8 +183,7 @@ async def mail_box(_, query : CallbackQuery):
             await query.message.edit(f""" 
 **📬Done,Your Email Address Created!**
 📧 **Email** : `{smail}`
-📨 **Mail BOX** : ✅
-**Powered by** : @BETA_BOTZ""",
+📨 **Mail BOX** : ✅""",
 reply_markup = mbutton
 )   
         except bad_request_400.MessageNotModified as e:
