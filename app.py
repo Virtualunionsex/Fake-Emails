@@ -71,33 +71,11 @@ start_button = InlineKeyboardMarkup(
 
 
 
-@app.on_message(filters.command("start"))
+@app.on_message(filters.private & filters.command("start"))
 async def start(_, message: Message):
-    try:
-       await message._client.get_chat_member(CHANNEL_ID, message.from_user.id)
-    except UserNotParticipant:
-       await message.reply(
-			chat_id=message.from_user.id,
-			text=f"""
-🚧 **Access Denied** {message.from_user.mention}
-DUE TO OVERLOAD,
-🔹YOU MUST JOIN OUR CHANNEL
-
-JOIN @{CHANNEL} 💎"""                 
-       )
-       return     
-    name = message.from_user.id
-    if message.chat.type != "private":
-       await app.send_message(
-        name,
+    await message.reply_text(
         text = start_text.format(message.from_user.mention),
         reply_markup = start_button)
-       return await add_served_chat(message.chat.id) 
-    else:
-        await app.send_message(
-    name,
-    text = start_text.format(message.from_user.mention),
-    reply_markup = start_button)
     return await add_served_user(message.from_user.id)
     chnl = await app.create_chat_invite_link(int(CHANNEL_ID))
 
