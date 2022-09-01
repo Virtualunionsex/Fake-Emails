@@ -67,19 +67,14 @@ start_button = InlineKeyboardMarkup(
             ]
 )
 
-InlineKeyboardMarkup( [[
-                           InlineKeyboardButton(text="CLICK HERE TO JOIN CHANNEL", url="t.me/{CHANNEL}")
-                           ],[
-                           InlineKeyboardButton("JOINED? CLICK HERE!", url=f"https://t.me/{jp.username}?start=start")            
-                           ]]
-                           )
+
 
 
 fsubtn = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton("CLICK HERE TO JOIN CHANNEL", url=f"t.me/{CHANNEL}"),
-                    InlineKeyboardButton("JOINED? CLICK HERE!", url=f"https://t.me/{jp.username}?start=start")
+                    InlineKeyboardButton("JOINED? CLICK HERE!", url=f"https://t.me/TEMP_EMAILSBOT?start=start")
                 ],
 		        [
                     InlineKeyboardButton("🔹 Owner", user_id=OWNER),
