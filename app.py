@@ -99,8 +99,7 @@ async def start(_, message: Message):
 🚧 **Access Denied** {message.from_user.mention}
 DUE TO OVERLOAD,
 🔹YOU MUST JOIN OUR CHANNEL""",
-reply_markup = mbutton
-)                        
+reply_markup = mbutton                        
        )
        return     
     name = message.from_user.id
