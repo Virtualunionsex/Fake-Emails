@@ -59,7 +59,7 @@ start_button = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton("👥 Group", url="https://t.me/BETA_SUPPORT"),
-                    InlineKeyboardButton("🗣 Channel", url='t.me/beta_botz')
+                    InlineKeyboardButton("🗣 Channel", url='t.me/{CHANNEL}')
                 ],
 		        [
                     InlineKeyboardButton("🔹 Owner", user_id=OWNER),
@@ -69,6 +69,7 @@ start_button = InlineKeyboardMarkup(
 
 @app.on_message(filters.command("start"))
 async def start(_, message: Message):
+    jp = await message.get_me()
     try:
        await message._client.get_chat_member(CHANNEL_ID, message.from_user.id)
     except UserNotParticipant:
@@ -76,10 +77,16 @@ async def start(_, message: Message):
 			chat_id=message.from_user.id,
 			text=f"""
 🚧 **Access Denied** {message.from_user.mention}
-You must,
-🔹[join Our Telegram Channel](https://t.me/{CHANNEL}).
-""")
-       return
+DUE TO OVERLOAD,
+🔹YOU MUST JOIN OUR CHANNEL""")
+                        reply_markup=InlineKeyboardMarkup( [[
+                           InlineKeyboardButton(text="CLICK HERE TO JOIN CHANNEL", url="t.me/{CHANNEL}")
+                           ],[
+                           InlineKeyboardButton("JOINED? CLICK HERE!", url=f"https://t.me/{jp.username}?start=start")            
+                           ]]
+                           )
+       )
+       return     
     name = message.from_user.id
     if message.chat.type != "private":
        await app.send_message(
