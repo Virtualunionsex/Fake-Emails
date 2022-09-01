@@ -62,7 +62,7 @@ start_button = InlineKeyboardMarkup(
                     InlineKeyboardButton("🗣 Channel", url="t.me/beta_botz")
                 ],
 		        [
-                    InlineKeyboardButton("🔹 Owner", user_id=5172114510),
+                    InlineKeyboardButton("🔹 Owner", url="t.me/about_jeol"),
                 ]    
             ]
 )
