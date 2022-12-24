@@ -27,6 +27,14 @@ from database import (
     remove_served_chat
 )
 
+
+API_HASH = ""
+API_ID = ""
+BOT_TOKEN = ""
+CHANNEL_ID = ""
+CHANNEL = ""
+OWNER = ""
+
 app = Client(
     "Fake_mail_bot",
     api_hash= os.environ["API_HASH"],
