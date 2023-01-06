@@ -66,11 +66,11 @@ OWNER = int(os.environ['OWNER'])
 start_button = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👥 Group", url="https://t.me/BETA_SUPPORT"),
-                    InlineKeyboardButton("🗣 Channel", url="t.me/beta_botz")
+                    InlineKeyboardButton("👥 Group", url="https://t.me/NAKAMA_ASL"),
+                    InlineKeyboardButton("🗣 Channel", url="t.me/nakamaop")
                 ],
 		        [
-                    InlineKeyboardButton("🔹 Other Botz", url="https://t.me/BETA_BOTZ/86"),
+                    InlineKeyboardButton("🔹 Other Botz", url="https://t.me/azureod_robot/86"),
                 ]    
             ]
 )
@@ -101,7 +101,7 @@ API3='https://www.1secmail.com/api/v1/?action=readMessage&login='
 #********************************************************************************
 
 create = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("BETA BOTZ", url="https://t.me/BETA_BOTZ")]])
+            [[InlineKeyboardButton("BETA BOTZ", url="https://t.me/nakama_asl")]])
 
 #********************************************************************************
 @app.on_message(filters.command("new"))
