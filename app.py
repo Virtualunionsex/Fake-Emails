@@ -70,7 +70,7 @@ start_button = InlineKeyboardMarkup(
                     InlineKeyboardButton("🗣 Channel", url="t.me/nakamaop")
                 ],
 		        [
-                    InlineKeyboardButton("🔹 Other Botz", url="https://t.me/azureod_robot/86"),
+                    InlineKeyboardButton("🔹 Other Botz", url="https://t.me/azureid_robot/86"),
                 ]    
             ]
 )
